@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/algorithm/cypher")
-public class CypherAlgorithmController {
+public class CypherController {
 
-    ICypherService cypherService;
+    private ICypherService cypherService;
 
     @PostMapping("/enigma/encode")
     public ResponseEntity<String> enigmaEncode(@RequestBody MessageContainer messageContainer) {

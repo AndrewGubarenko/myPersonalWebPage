@@ -1,4 +1,4 @@
-package com.ah.AHCodeCraft.algorithms;
+package com.ah.AHCodeCraft.algorithms.cipher;
 
 import org.springframework.stereotype.Component;
 

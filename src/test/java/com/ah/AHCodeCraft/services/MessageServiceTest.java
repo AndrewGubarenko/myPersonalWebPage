@@ -27,7 +27,6 @@ class MessageServiceTest {
         assertEquals(expected, service.processMessage("where am I?"));
         assertEquals(expected, service.processMessage("Who am I?"));
         assertEquals(expected, service.processMessage(""));
-
     }
 
     @Test

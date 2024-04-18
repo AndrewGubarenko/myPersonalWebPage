@@ -19,7 +19,6 @@ public class CypherService implements ICypherService {
     private Enigma enigma;
     private Caesar caesar;
     private Vigenere vigenere;
-    private RequestProcessingUtil requestProcessingUtil;
 
     @Override
     public String enigmaEncode(MessageContainer messageContainer) {

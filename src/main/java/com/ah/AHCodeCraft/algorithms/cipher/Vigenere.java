@@ -10,9 +10,13 @@ public class Vigenere {
         int keywordLength = keyword.length();
         for (int i = 0; i < plaintext.length(); i++) {
             char plainChar = plaintext.charAt(i);
-            char keywordChar = keyword.charAt(i % keywordLength);
-            char encodedChar = shiftChar(plainChar, keywordChar);
-            encodedText.append(encodedChar);
+            if (Character.isLetter(plainChar)) {
+                char keywordChar = keyword.charAt(i % keywordLength);
+                char encodedChar = shiftChar(plainChar, keywordChar);
+                encodedText.append(encodedChar);
+            } else {
+                encodedText.append(plainChar);
+            }
         }
         return encodedText.toString();
     }
@@ -22,9 +26,13 @@ public class Vigenere {
         int keywordLength = keyword.length();
         for (int i = 0; i < encodedText.length(); i++) {
             char encodedChar = encodedText.charAt(i);
-            char keywordChar = keyword.charAt(i % keywordLength);
-            char decodedChar = unshiftChar(encodedChar, keywordChar);
-            decodedText.append(decodedChar);
+            if (Character.isLetter(encodedChar)) {
+                char keywordChar = keyword.charAt(i % keywordLength);
+                char decodedChar = unshiftChar(encodedChar, keywordChar);
+                decodedText.append(decodedChar);
+            } else {
+                decodedText.append(encodedChar);
+            }
         }
         return decodedText.toString();
     }

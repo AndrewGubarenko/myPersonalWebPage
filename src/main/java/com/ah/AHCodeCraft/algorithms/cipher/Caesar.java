@@ -8,8 +8,12 @@ public class Caesar {
     public String encode(String plaintext, int shift) {
         StringBuilder encodedText = new StringBuilder();
         for (char c : plaintext.toCharArray()) {
-            char base = Character.isLowerCase(c) ? 'a' : 'A';
-            encodedText.append((char) (((c - base + shift) % 26) + base));
+            if (Character.isLetter(c)) {
+                char base = Character.isLowerCase(c) ? 'a' : 'A';
+                encodedText.append((char) (((c - base + shift) % 26) + base));
+            } else {
+                encodedText.append(c);
+            }
         }
         return encodedText.toString();
     }
@@ -18,8 +22,13 @@ public class Caesar {
         shift = (shift % 26 + 26) % 26;
         StringBuilder decodedText = new StringBuilder();
         for (char c : encodedText.toCharArray()) {
-            char base = Character.isLowerCase(c) ? 'a' : 'A';
-            decodedText.append((char) (((c - base - shift + 26) % 26) + base));
+            if (Character.isLetter(c)) {
+                char base = Character.isLowerCase(c) ? 'a' : 'A';
+                char decodedChar = (char) (((c - base - shift + 26) % 26) + base);
+                decodedText.append(decodedChar);
+            } else {
+                decodedText.append(c);
+            }
         }
         return decodedText.toString();
     }

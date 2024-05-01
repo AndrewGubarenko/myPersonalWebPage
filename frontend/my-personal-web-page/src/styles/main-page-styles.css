@@ -1,0 +1,28 @@
+/* background-container */
+.video-background {
+    position: absolute;
+    width: 100%;
+    height: 100vh; /* Set height to viewport height */
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    filter: hue-rotate(200deg) brightness(1.2);
+    z-index: -2;
+}
+
+.video-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(178.88deg, #040C0B 19.05%, rgba(4, 12, 11, 0.612215) 42.95%, rgba(4, 12, 11, 0) 69.64%);
+    z-index: -1;
+}

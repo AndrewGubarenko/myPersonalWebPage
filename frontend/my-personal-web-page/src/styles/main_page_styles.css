@@ -12,7 +12,7 @@
     min-height: 100%;
     width: auto;
     height: auto;
-    filter: hue-rotate(200deg) brightness(1.2);
+    filter: hue-rotate(202deg) brightness(0.6);
     z-index: -2;
 }
 

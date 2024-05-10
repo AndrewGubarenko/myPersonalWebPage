@@ -1,6 +1,7 @@
-@import "./styles/main-page-styles.css";
-@import "styles/header-styles.css";
-@import "styles/footer-styles.css";
+@import "styles/main_page_styles.css";
+@import "styles/header_styles.css";
+@import "styles/footer_styles.css";
+@import "styles/about_me_styles.css";
 
 .app {
     display: flex;

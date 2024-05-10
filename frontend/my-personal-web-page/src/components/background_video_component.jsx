@@ -4,7 +4,7 @@ function BackgroundVideo() {
     return(
         <div className="main-container">
             <div className="video-background">
-                <video autoPlay muted loop >
+                <video autoPlay muted loop>
                     <source src={bgVideo} type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>

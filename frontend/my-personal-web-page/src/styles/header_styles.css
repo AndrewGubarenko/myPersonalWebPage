@@ -33,11 +33,12 @@
     -moz-transition: color 300ms ease-out;
     -o-transition: color 300ms ease-out;
     transition: color 300ms ease-out;
+    cursor: pointer;
 }
 
 .header li::after {
     content: '';
-    width: 0px;
+    width: 0;
     height: 1px;
     display: block;
     background: rgba(255, 255, 255, 1);

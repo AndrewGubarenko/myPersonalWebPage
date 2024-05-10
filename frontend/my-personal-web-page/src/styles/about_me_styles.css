@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 85vh;
+    height: 100vh;
     align-items: center;
     z-index: 1;
 }
 
 .intro_container {
-    width: 32.625em;
+    width: 30em;
     height: 23.25em;
     background: rgba(20, 30, 37, 0.6);
     border-radius: 1em;
@@ -61,4 +61,33 @@
     flex-direction: row;
     margin-top: 2.5em;
     justify-content: space-between;
+}
+
+/* background-container */
+.video-background {
+    position: absolute;
+    width: 100%;
+    height: 100vh; /* Set height to viewport height */
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    filter: hue-rotate(202deg) brightness(0.6);
+    z-index: -2;
+}
+
+.video-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(178.88deg, #040C0B 19.05%, rgba(4, 12, 11, 0.612215) 42.95%, rgba(4, 12, 11, 0) 69.64%);
+    z-index: -1;
 }

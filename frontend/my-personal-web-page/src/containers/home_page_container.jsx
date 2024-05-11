@@ -1,11 +1,11 @@
 import React from 'react';
 
-import AboutMeComponent from '../components/about_me_component';
+import MyInvitationComponent from '../components/my_invitation_component';
 import MyTopSkillsComponent from "../components/my_top_skills_component";
 import bgVideo from "../statics/bg-video.mp4";
 
 
-function AboutMeContainer() {
+function HomePageContainer() {
 
     return (
         <div className="main-container">
@@ -15,7 +15,7 @@ function AboutMeContainer() {
                     Your browser does not support the video tag.
                 </video>
                 <div className="about_me_container">
-                    <AboutMeComponent/>,
+                    <MyInvitationComponent/>,
                     <MyTopSkillsComponent/>
                 </div>
             </div>
@@ -24,4 +24,4 @@ function AboutMeContainer() {
     );
 }
 
-export default AboutMeContainer;
+export default HomePageContainer;

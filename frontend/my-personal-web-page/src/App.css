@@ -1,9 +1,15 @@
 @import "styles/header_styles.css";
 @import "styles/footer_styles.css";
-@import "styles/about_me_styles.css";
+@import "styles/invitation_styles.css";
+@import "styles/about_styles.css";
 
 .app {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+}
+
+.app p {
+    cursor: default;
 }

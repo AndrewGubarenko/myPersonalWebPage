@@ -35,7 +35,6 @@
     -moz-transition: color 300ms ease-out;
     -o-transition: color 300ms ease-out;
     transition: color 300ms ease-out;
-    cursor: default;
 }
 
 .header li::after {
@@ -50,4 +49,10 @@
 .header li:hover::after {
     width: 100%;
     background: rgba(254, 234, 83, 1);
+}
+
+.header_link {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: default;
 }

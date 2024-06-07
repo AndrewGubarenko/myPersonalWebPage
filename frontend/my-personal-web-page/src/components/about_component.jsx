@@ -15,8 +15,8 @@ import {Link} from "react-router-dom";
 
 function AboutComponent() {
     return (
-        <div className="about">
-            <div className="block_container">
+        <div className="background_block">
+            <div className="block_container last_block_container">
 
                 <div className="narrow_column">
                     <div className="narrow_block expand_block_to_bottom">

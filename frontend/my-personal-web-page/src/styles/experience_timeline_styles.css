@@ -1,0 +1,64 @@
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 100%;
+    width: 100%;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    height: 6px;
+    border-radius: 3px;
+    width: 90%;
+    background: linear-gradient(#FEEA53 0%, #F1B306 100%);
+    left: 5%;
+    bottom: 0.5em;
+}
+
+.timeline-item {
+    padding: 2em 0;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Oxygen, monospace;
+    cursor: pointer;
+}
+
+.period {
+    color: #FEEA53;
+}
+
+.company-name {
+    color: #FFF;
+    width: min-content;
+}
+
+.timeline-content {
+    position: absolute;
+    bottom: 50%;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.timeline-content-last {
+    top: 100%;
+}
+
+.timeline-dot {
+    position: absolute;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(to right, #FEEA53, #F1B306);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline-link {
+    text-decoration: none;
+}

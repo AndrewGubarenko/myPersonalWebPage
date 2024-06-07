@@ -6,6 +6,7 @@ import {Route, Routes, HashRouter} from 'react-router-dom';
 import { Layout } from "./containers/Layout";
 import HomePageContainer from "./containers/home_page_container";
 import AboutComponent from "./components/about_component";
+import ExperienceContainer from "./containers/experience_container";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <Route path="/" element={<Layout/>}>
                         <Route index element={<HomePageContainer/>}/>
                         <Route path="/about" element={<AboutComponent/>}/>
+                        <Route path="/experience" element={<ExperienceContainer/>}/>
                     </Route>
                 </Routes>
             </HashRouter>

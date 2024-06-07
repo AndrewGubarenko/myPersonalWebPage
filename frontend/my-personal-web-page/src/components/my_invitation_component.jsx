@@ -34,7 +34,7 @@ class MyInvitationComponent extends Component {
         return (
             <div className="intro_container">
                 <p id="intro_text">
-                    Hello, I`m Andrii Hubarenko
+                    Hello, I'm Andrii Hubarenko
                 </p>
                 <p id="about_me_text">
                     Dedicated and reliable Java Developer with a well-rounded expertise encompassing both Back-End and

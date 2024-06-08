@@ -1,5 +1,4 @@
 .block_container {
-    #border: 1px solid chartreuse;
     display: flex;
     flex-direction: row;
     height: auto;
@@ -35,12 +34,6 @@
     line-height: 120%;
 }
 
-.text {
-    color: rgba(255, 255, 255, 1);
-    font-family: Oxygen, monospace;
-    font-size: 1em;
-}
-
 .block_icon {
     width: 60px;
     height: 60px;
@@ -72,6 +65,18 @@
     color: rgba(255, 255, 255, 1);
     font-family: Oxygen, monospace;
     font-size: 1em;
+    line-height: 150%;
+}
+
+.ul_experience_tasks {
+    margin-top: 2em;
+}
+
+.list {
+    color: rgba(255, 255, 255, 1);
+    font-family: Oxygen, monospace;
+    font-size: 1em;
+    line-height: 150%;
 }
 
 .tech_icon_container {
@@ -165,7 +170,7 @@
     font-weight: bold;
     color: #040C0B;
     font-family: Oxygen, monospace;
-    font-size: 28px;
+    font-size: 1.75em;
 }
 
 .yellow_block {
@@ -194,6 +199,46 @@
     justify-content: center;
 }
 
+.two_third_width_container {
+    height: 30.4375em;
+    margin-top: 20px;
+    margin-right: 20px;
+    background: rgba(20, 30, 37, 0.75);
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
 .row_container {
     width: calc(19.0625em + 19.0625em + 23.375em + 40px);
+}
+
+.two_thirds_row_container {
+    width: calc(19.0625em + 23.375em + 40px);
+}
+
+.two_thirds_column_container {
+    width: calc(19.0625em + 23.375em + 40px);
+    float: left;
+}
+
+.yellow_block_experience {
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 2.5em;
+}
+
+.company-yellow-block {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin: 0 0 1em 0;
+    font-family: Oxygen, monospace;
+}
+
+.position-yellow-block {
+    font-size: 1.75em;
+    margin: 0;
+    font-family: Oxygen, monospace;
 }

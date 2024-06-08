@@ -1,7 +1,8 @@
 import React from 'react';
 import ExperienceComponent from '../components/experience_component';
+import withNavigation from '../hoc/withNavigation';
 
-let experience = [
+const experience = [
     {
         "company": "ETIYA",
         "period": {
@@ -10,9 +11,9 @@ let experience = [
         },
         "position": "Java Developer",
         "tasks": {
-            "description:": "Development of extensive web resources dedicated to personal account management and customer service administration.",
+            "description": "Development of extensive web resources dedicated to personal account management and customer service administration.",
             "points": [
-                "Design and Develop Robust REST APIС",
+                "Design and Develop Robust REST API",
                 "Facilitate External System Integration",
                 "Scripting and Database Management",
                 "Effective communication with Stakeholders",
@@ -31,7 +32,7 @@ let experience = [
         },
         "position": "Java education content creator",
         "tasks": {
-            "description:": "Conceptualized, scripted, and produced engaging educational content.",
+            "description": "Conceptualized, scripted, and produced engaging educational content.",
             "points": [
                 "Developed comprehensive educational programs tailored for Java developers.",
                 "Produced engaging and informative educational content, including presentations, exams, and software programs",
@@ -48,7 +49,7 @@ let experience = [
         },
         "position": "Fullstack Developer",
         "tasks": {
-            "description:": "To offer accessible union announcements while providing exclusive access to essential documents reserved solely for union members.",
+            "description": "To offer accessible union announcements while providing exclusive access to essential documents reserved solely for union members.",
             "points": [
                 "Server-Side Development",
                 "Frontend Development",
@@ -71,12 +72,12 @@ let experience = [
         },
         "position": "Web Developer",
         "tasks": {
-            "description:": "Leveraging a diverse set of technologies, I seamlessly integrated HTML5, CSS3, JavaScript, AJAX, PHP, and MySQL databases.",
+            "description": "Leveraging a diverse set of technologies, I seamlessly integrated HTML5, CSS3, JavaScript, AJAX, PHP, and MySQL databases.",
             "points": ["Server-side scripting using PHP",
-            "Frontend Development",
-            "Comprehensive Database Modeling",
-            "DevOps and Deployment",
-            "User Interface/Experience Optimization"]
+                "Frontend Development",
+                "Comprehensive Database Modeling",
+                "DevOps and Deployment",
+                "User Interface/Experience Optimization"]
         }
     },
     {
@@ -87,7 +88,7 @@ let experience = [
         },
         "position": "Air Traffic Controller",
         "tasks": {
-            "description:": "Air traffic control entails multitasking within a dynamic and constantly evolving environment. Success hinges on individual dedication as well as seamless teamwork. Leveraging radar systems and various radio equipment, my colleagues and I diligently strive to uphold flight safety. Effective English communication among pilots and adjacent sector controllers plays a pivotal role in this intricate process, facilitating clear and efficient exchanges crucial for maintaining airspace integrity and ensuring the well-being of all passengers and crew.",
+            "description": "Air traffic control entails multitasking within a dynamic and constantly evolving environment. Success hinges on individual dedication as well as seamless teamwork. Leveraging radar systems and various radio equipment, my colleagues and I diligently strive to uphold flight safety. Effective English communication among pilots and adjacent sector controllers plays a pivotal role in this intricate process, facilitating clear and efficient exchanges crucial for maintaining airspace integrity and ensuring the well-being of all passengers and crew.",
             "points": []
         }
     }
@@ -102,11 +103,23 @@ class ExperienceContainer extends React.Component {
         };
     }
 
+    onClickPosition = (item) => {
+        this.props.navigate('/position', {
+            state: {
+                experience: this.state.experience,
+                singleExperience: item
+            }
+        });
+    };
+
     render() {
-        return(
-            <ExperienceComponent experience={this.state.experience}/>
-        )
+        return (
+            <ExperienceComponent
+                experience={this.state.experience}
+                onClickPosition={this.onClickPosition}
+            />
+        );
     }
 }
 
-export default ExperienceContainer;
+export default withNavigation(ExperienceContainer);

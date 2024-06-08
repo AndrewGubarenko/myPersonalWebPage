@@ -1,9 +1,7 @@
 import CV from "../statics/icons/experience/ion_document.svg";
 import Rectangle from "../statics/icons/experience/Rectangle 24.svg";
 
-import {Link} from "react-router-dom";
-
-function ExperienceComponent({ experience }) {
+function ExperienceComponent({ experience, onClickPosition }) {
     return(
         <div className="background_block">
             <div className="row_container">
@@ -44,7 +42,7 @@ function ExperienceComponent({ experience }) {
                             const isLast = index === experience.length - 1;
 
                             return (
-                                <Link to="/#" key={index} className="timeline-link">
+                                <div key={index} className="timeline-link" onClick={() => onClickPosition(item)}>
                                     <div className="timeline-item">
                                         <div className={`timeline-content ${isLast ? 'timeline-content-last' : ''}`}>
                                             <p className="company-name">{item.company}</p>
@@ -54,7 +52,7 @@ function ExperienceComponent({ experience }) {
                                         </div>
                                         <div className={`timeline-dot ${isLast ? 'timeline-dot-last' : ''}`}></div>
                                     </div>
-                                </Link>
+                                </div>
                             );
                         })}
                     </div>

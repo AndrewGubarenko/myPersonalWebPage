@@ -5,6 +5,8 @@
     justify-content: space-around;
     max-width: 100%;
     width: 100%;
+    height: auto;
+    padding: 0 40px;
 }
 
 .timeline::before {
@@ -29,8 +31,20 @@
     cursor: pointer;
 }
 
+.timeline-item-selected {
+    font-weight: bold;
+    font-size: 28px;
+    cursor: default;
+}
+
 .period {
     color: #FEEA53;
+}
+
+.period_selected {
+    color: #FEEA53;
+    cursor: default;
+    white-space: nowrap;
 }
 
 .company-name {
@@ -45,20 +59,44 @@
     cursor: pointer;
 }
 
+.timeline-content-selected {
+    cursor: default;
+}
+
 .timeline-content-last {
     top: 100%;
 }
 
 .timeline-dot {
     position: absolute;
-    bottom: 0;
-    width: 24px;
-    height: 24px;
+    bottom: 0.15em;
+    width: 16px;
+    height: 16px;
     background: linear-gradient(to right, #FEEA53, #F1B306);
     border-radius: 50%;
     z-index: 2;
 }
 
-.timeline-link {
+.timeline-dot-underline {
+    top: 0;
+}
 
+.timeline-dot-selected {
+    position: absolute;
+    bottom: -0.15em;
+    width: 29px;
+    height: 29px;
+    background: linear-gradient(to right, #FEEA53, #F1B306);
+    border-radius: 50%;
+    cursor: default;
+    z-index: 3;
+}
+
+.timeline-link {
+    height: 5em;
+}
+
+.timeline-item-underline {
+    position: relative;
+    top: 3.8em;
 }

@@ -4,6 +4,7 @@ import withNavigation from '../hoc/withNavigation';
 
 const experience = [
     {
+        "id": 1,
         "company": "ETIYA",
         "period": {
             "startDate": 1652389200000,
@@ -25,6 +26,7 @@ const experience = [
         }
     },
     {
+        "id": 2,
         "company": "ITVDN",
         "period": {
             "startDate": 1682888400000,
@@ -42,6 +44,7 @@ const experience = [
         }
     },
     {
+        "id": 3,
         "company": "ATCO Trade Union",
         "period": {
             "startDate": 1619816400000,
@@ -65,6 +68,7 @@ const experience = [
         }
     },
     {
+        "id": 4,
         "company": "With Care in Heart",
         "period": {
             "startDate": 1456783200000,
@@ -81,6 +85,7 @@ const experience = [
         }
     },
     {
+        "id": 5,
         "company": "UkSatSe",
         "period": {
             "startDate": 1652389200000,

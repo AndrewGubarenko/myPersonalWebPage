@@ -1,7 +1,6 @@
 import BackEnd from "../statics/icons/about/Group 5.svg";
 import FrontEnd from "../statics/icons/about/Group 3.svg";
 import ProjectManagement from "../statics/icons/about/Group 9.svg";
-
 import Java from "../statics/icons/about/ri_java-line.svg";
 import Python from "../statics/icons/about/teenyicons_python-solid.svg"
 import JS from "../statics/icons/about/tabler_brand-javascript.svg"
@@ -94,8 +93,8 @@ function AboutComponent() {
                             <img src={BackEnd} alt="BackEnd" className="block_icon"/>
                         </div>
                         <div className="text_container">
-                            <p className="sub_header">Front-End</p>
-                            <p className="text">Gracefully bring the ideas to life from scratch and to the browser.</p>
+                            <p className="sub_header">Architecture</p>
+                            <p className="text">Design patterns, Architectural patterns, SOLID patterns, OOP, REST, Microservices</p>
                         </div>
                     </div>
 
@@ -118,4 +117,4 @@ function AboutComponent() {
     );
 }
 
-export default AboutComponent
+export default AboutComponent;

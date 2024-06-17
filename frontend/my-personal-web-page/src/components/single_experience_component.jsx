@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import TaskPerformed from "../statics/icons/experience/Group 14.svg";
 
 function SingleExperienceComponent({ experience, singleExperience, onClickPosition }) {
@@ -82,7 +83,9 @@ function SingleExperienceComponent({ experience, singleExperience, onClickPositi
                 <div className="narrow_column last_column">
                     <div className="narrow_block last_block_container expand_block_to_bottom">
                         <div className="icon_frame">
-                            <img src={TaskPerformed} alt="BackEnd" className="block_icon" />
+                            <Link to="/experience">
+                                <img src={TaskPerformed} alt="BackEnd" className="block_icon" />
+                            </Link>
                         </div>
                         <div className="text_container">
                             <p className="sub_header">Task <br /> performed</p>

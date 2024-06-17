@@ -8,6 +8,7 @@
 }
 
 .intro_container {
+    position: relative;
     width: 30em;
     height: 23.25em;
     background: rgba(20, 30, 37, 0.6);

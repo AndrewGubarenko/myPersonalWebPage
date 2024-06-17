@@ -18,7 +18,8 @@ function FooterComponent() {
                         <a href="mailto:andrii.hubarenko.developer@gmail.com" target="_blank">
                             <img src={Mail32} alt="MailTo" className="footer_link_icon"/>
                         </a>
-                        <a href="https://www.linkedin.com/in/andrii-hubarenko-1a2988116/" target="_blank" rel="noreferrer">
+                        <a href="https://www.linkedin.com/in/andrii-hubarenko-1a2988116/" target="_blank"
+                           rel="noreferrer">
                             <img src={In32} alt="LinkedIn" className="footer_link_icon"/>
                         </a>
                     </div>

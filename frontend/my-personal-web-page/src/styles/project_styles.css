@@ -1,0 +1,28 @@
+.cover_image_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.cover_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+    border-radius: 1em;
+}
+
+.narrow_block:hover .cover_image {
+    opacity: 0;
+}
+
+.wide_block:hover .cover_image {
+    opacity: 0;
+}
+
+.icon_overlays {
+    z-index: 2;
+}

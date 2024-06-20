@@ -15,11 +15,10 @@ function FooterComponent() {
                         <a href="https://github.com/AndrewGubarenko" target="_blank" rel="noreferrer">
                             <img src={GitHub32} alt="GitHub" className="footer_link_icon"/>
                         </a>
-                        <a href="mailto:andrii.hubarenko.developer@gmail.com" target="_blank">
+                        <a href="mailto:andrii.hubarenko.developer@gmail.com" target="_blank" rel="noreferrer">
                             <img src={Mail32} alt="MailTo" className="footer_link_icon"/>
                         </a>
-                        <a href="https://www.linkedin.com/in/andrii-hubarenko-1a2988116/" target="_blank"
-                           rel="noreferrer">
+                        <a href="https://www.linkedin.com/in/andrii-hubarenko-1a2988116/" target="_blank" rel="noreferrer">
                             <img src={In32} alt="LinkedIn" className="footer_link_icon"/>
                         </a>
                     </div>

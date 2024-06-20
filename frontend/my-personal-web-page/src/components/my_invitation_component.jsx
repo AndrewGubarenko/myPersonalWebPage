@@ -1,38 +1,22 @@
-import React, { Component } from 'react';
-
 import GitHub32 from '../statics/icons/32/skill-icons_github-dark.svg';
 import Mail32 from '../statics/icons/32/icomoon-free_mail.svg';
 import In32 from '../statics/icons/32/mingcute_linkedin-fill.svg';
+import { motion, MotionConfig  } from "framer-motion";
 
+function MyInvitationComponent() {
 
-class MyInvitationComponent extends Component {
-
-    componentDidMount() {
-        const footerElement = document.querySelector('.footer');
-        const footerLinksIcons = document.querySelector('#footer_link_icons_container');
-        if (footerElement) {
-            footerElement.style.position = 'fixed';
-            footerLinksIcons.style.display = 'none';
-        } else {
-            console.error('Footer element not found');
-        }
-    }
-
-    componentWillUnmount() {
-        const footerElement = document.querySelector('.footer');
-        const footerLinksIcons = document.querySelector('#footer_link_icons_container');
-        if (footerElement) {
-            footerElement.style.position = 'absolute';
-            footerLinksIcons.style.display = 'block';
-        } else {
-            console.error('Footer element not found');
-        }
-    }
-
-
-    render() {
-        return (
-            <div className="intro_container">
+    return (
+        <MotionConfig transition={{ duration: 0.5 }}>
+            <motion.div className="intro_container"
+                        initial={{
+                            opacity: 0,
+                            x: -200,
+                            y: -200,}}
+                        animate={{
+                            x: 0,
+                            y: 0,
+                            opacity: 1
+                        }}>
                 <p id="intro_text">
                     Hello, I'm Andrii Hubarenko
                 </p>
@@ -53,9 +37,9 @@ class MyInvitationComponent extends Component {
                         <img src={In32} alt="LinkedIn"/>
                     </a>
                 </div>
-            </div>
-        );
-    }
+            </motion.div>
+        </MotionConfig>
+    );
 }
 
 export default MyInvitationComponent;

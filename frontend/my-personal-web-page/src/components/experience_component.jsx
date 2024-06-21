@@ -2,7 +2,7 @@ import CV from "../statics/icons/experience/ion_document.svg";
 import Rectangle from "../statics/icons/experience/Rectangle 24.svg";
 import { motion, MotionConfig  } from "framer-motion";
 
-function ExperienceComponent({ experience, onClickPosition }) {
+function ExperienceComponent({ experience, onClickPosition, onClickDownloadCV }) {
 
     const list = {
         visible: {
@@ -48,23 +48,24 @@ function ExperienceComponent({ experience, onClickPosition }) {
                             </motion.div>
                         </div>
 
-                        <motion.div className="narrow_column"
-                                    initial={{
-                                        opacity: 0,
-                                        x: -200,
-                                        y: 200,}}
-                                    animate={{
-                                        x: 0,
-                                        y: 0,
-                                        opacity: 1
-                                    }}>
-                            <div className="narrow_block yellow_block expand_block_to_bottom">
-                                <p id="download_cv">
-                                    Download My CV
-                                </p>
-                                <img src={CV} alt="CV" className="block_icon"/>
-                            </div>
-                        </motion.div>
+
+                            <motion.div className="narrow_column" style={{cursor: "pointer"}} onClick={onClickDownloadCV}
+                                        initial={{
+                                            opacity: 0,
+                                            x: -200,
+                                            y: 200,}}
+                                        animate={{
+                                            x: 0,
+                                            y: 0,
+                                            opacity: 1
+                                        }}>
+                                <div className="narrow_block yellow_block expand_block_to_bottom">
+                                    <p id="download_cv">
+                                        Download My CV
+                                    </p>
+                                    <img src={CV} alt="CV" className="block_icon"/>
+                                </div>
+                            </motion.div>
 
                         <motion.div className="narrow_column last_column"
                                     initial={{

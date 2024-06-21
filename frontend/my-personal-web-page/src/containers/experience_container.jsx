@@ -1,6 +1,7 @@
 import React from 'react';
 import ExperienceComponent from '../components/experience_component';
 import withNavigation from '../hoc/withNavigation';
+import Service from "../services/service";
 
 const experience = [
     {
@@ -117,11 +118,22 @@ class ExperienceContainer extends React.Component {
         });
     };
 
+    onClickDownloadCV = () => {
+        Service.getCV().then(response => {
+            if (response.ok) {
+                alert("here is my CV");
+            } else {
+                alert("CV was not found");
+            }
+        });
+    }
+
     render() {
         return (
             <ExperienceComponent
                 experience={this.state.experience}
                 onClickPosition={this.onClickPosition}
+                onClickDownloadCV={this.onClickDownloadCV}
             />
         );
     }

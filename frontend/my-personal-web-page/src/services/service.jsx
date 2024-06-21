@@ -10,7 +10,7 @@ if(process.env.NODE_ENV === "development") {
 
 export default class Service {
 
-    static getCV = (id) => {
+    static getCV = () => {
         return fetch(startUrl + "cv", {
             method: "get",
             headers: new Headers({

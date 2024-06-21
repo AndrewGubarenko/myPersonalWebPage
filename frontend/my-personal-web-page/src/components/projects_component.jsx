@@ -30,16 +30,17 @@ function ProjectsComponent() {
                                         <img className="cover_image" src={WithCareInHeart} alt="With Care in Heart"/>
                                     </div>
                                     <div className="icon_frame icon_overlays">
-                                        <img src={Eye} alt="BackEnd" className="block_icon"/>
+                                        <a href="https://github.com/AndrewGubarenko/WithCareInHeart" target="_blank"
+                                           rel="noreferrer">
+                                            <img src={Eye} alt="BackEnd" className="block_icon"/>
+                                        </a>
                                     </div>
                                     <div className="text_container">
-                                        <p className="sub_header">With Care in Heart</p>
+                                    <p className="sub_header">With Care in Heart</p>
                                         <p className="text">Regional organization dedicated to empowering individuals to
-                                            make a
-                                            positive impact on healthcare in their community. Leveraging a diverse set of
+                                            make a positive impact on healthcare in their community. Leveraging a diverse set of
                                             technologies, I seamlessly integrated HTML5, CSS3, JavaScript, AJAX, PHP, and
-                                            MySQL
-                                            databases.
+                                            MySQL databases.
                                         </p>
                                     </div>
                                 </motion.div>
@@ -51,7 +52,10 @@ function ProjectsComponent() {
                                         <img className="cover_image" src={ATCOTradeUnion} alt="With Care in Heart"/>
                                     </div>
                                     <div className="icon_frame icon_overlays">
-                                        <img src={Eye} alt="BackEnd" className="block_icon"/>
+                                        <a href="https://github.com/AndrewGubarenko/AirNavHub" target="_blank"
+                                           rel="noreferrer">
+                                            <img src={Eye} alt="BackEnd" className="block_icon"/>
+                                        </a>
                                     </div>
                                     <div className="text_container">
                                         <p className="sub_header">ATCO Trade Union</p>
@@ -79,12 +83,16 @@ function ProjectsComponent() {
                                         <img className="cover_image" src={ITVDN} alt="With Care in Heart"/>
                                     </div>
                                     <div className="icon_frame icon_overlays">
-                                        <img src={Eye} alt="BackEnd" className="block_icon"/>
+                                        <a href="https://itvdn.com/ua/search?query=%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9%20%D0%93%D1%83%D0%B1%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE"
+                                           target="_blank"
+                                           rel="noreferrer">
+                                            <img src={Eye} alt="BackEnd" className="block_icon"/>
+                                        </a>
                                     </div>
                                     <div className="text_container">
                                         <p className="sub_header">ITVDN</p>
                                         <p className="text">
-                                            I managed end-to-end video production, from planning and shooting to editing and post-production. Collaborating with subject matter experts, I translated complex topics into compelling and accessible course material. Utilizing multimedia tools and staying current on industry trends, I consistently delivered high-quality courses that enhanced the learning experience for diverse audiences.
+                                        I managed end-to-end video production, from planning and shooting to editing and post-production. Collaborating with subject matter experts, I translated complex topics into compelling and accessible course material. Utilizing multimedia tools and staying current on industry trends, I consistently delivered high-quality courses that enhanced the learning experience for diverse audiences.
                                         </p>
                                     </div>
                                 </motion.div>
@@ -105,7 +113,9 @@ function ProjectsComponent() {
                                         <img className="cover_image" src={CodeLab} alt="With Care in Heart"/>
                                     </div>
                                     <div className="icon_frame icon_overlays">
-                                        <img src={Eye} alt="BackEnd" className="block_icon"/>
+                                        <Link to="/codelab">
+                                            <img src={Eye} alt="BackEnd" className="block_icon"/>
+                                        </Link>
                                     </div>
                                     <div className="text_container">
                                         <p className="sub_header">Code Lab</p>

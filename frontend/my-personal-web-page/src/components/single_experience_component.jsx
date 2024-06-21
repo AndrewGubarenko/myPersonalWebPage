@@ -7,7 +7,7 @@ function SingleExperienceComponent({ experience, singleExperience, onClickPositi
 
     const [prevIndex, setPrevIndex] = useState(0);
 
-    const handleClickPosition = (item, index) => {
+    const handleClickPosition = (item) => {
         setPrevIndex(experience.findIndex(exp => exp.id === singleExperience.id));
         onClickPosition(item);
     };

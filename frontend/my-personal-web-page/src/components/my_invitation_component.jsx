@@ -29,7 +29,7 @@ function MyInvitationComponent() {
                     <a href="https://github.com/AndrewGubarenko" target="_blank" className="icon_link" rel="noreferrer">
                         <img src={GitHub32} alt="GitHub"/>
                     </a>
-                    <a href="mailto:andrii.hubarenko.developer@gmail.com" target="_blank" className="icon_link">
+                    <a href="mailto:andrii.hubarenko.developer@gmail.com" target="_blank" className="icon_link" rel="noreferrer">
                         <img src={Mail32} alt="MailTo"/>
                     </a>
                     <a href="https://www.linkedin.com/in/andrii-hubarenko-1a2988116/" target="_blank" className="icon_link"

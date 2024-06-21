@@ -99,7 +99,7 @@ function ExperienceComponent({ experience, onClickPosition }) {
                              initial="hidden"
                              animate="visible"
                              variants={list}>
-                            {experience.map((item, index, i) => {
+                            {experience.map((item, index) => {
                                 const startYear = new Date(item.period.startDate).getFullYear();
                                 const endYear = new Date(item.period.endDate).getFullYear();
                                 const isLast = index === experience.length - 1;

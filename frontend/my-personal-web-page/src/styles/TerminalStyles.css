@@ -1,0 +1,67 @@
+.terminal {
+    background: radial-gradient(#313232, black);
+    color: rgba(254, 234, 83, 1);
+    font-family: 'Oxygen Mono', monospace;
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.5em 0.5em 1em #344C5C, -0.5em -0.5em 1em #344C5C;
+    border-radius: 2em;
+
+}
+
+.output {
+    flex-grow: 0;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    line-height: 150%;
+    padding-left: 50px;
+}
+
+.output:first-child {
+    padding-top: 50px;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.prompt {
+    margin-right: 5px;
+}
+
+.terminal-input {
+    background: none;
+    border: none;
+    color: rgba(254, 234, 83, 1);
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    flex-grow: 1;
+    caret-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: rgba(254, 234, 83, 1);
+    width: 10px;
+    height: 20px;
+    animation: blink 1s step-end infinite;
+    position: absolute;
+    z-index: 0;
+}
+
+@keyframes blink {
+    from, to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgba(254, 234, 83, 1);
+    }
+}

@@ -1,5 +1,5 @@
 .contact_form_label {
-    color:rgba(254, 234, 83, 1);
+    color: rgba(254, 234, 83, 1);
     font-family: Oxygen, monospace;
     font-size: 1em;
     line-height: 120%;
@@ -91,5 +91,5 @@
 }
 
 .up_container {
-    padding-top: 5em;
+    padding-top: 0;
 }

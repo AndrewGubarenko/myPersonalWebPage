@@ -9,6 +9,7 @@ import AboutComponent from "./components/about_component";
 import TestimonialsComponent from "./components/testimonials_component";
 import ProjectsComponent from "./components/projects_component";
 import ContactsContainer from "./containers/contacts_container";
+import TerminalContainer from "./containers/terminal_container";
 import ExperienceContainer from "./containers/experience_container";
 import SingleExperienceContainer from "./containers/single_experience_container";
 
@@ -25,6 +26,7 @@ function App() {
                         <Route path="/testimonials" element={<TestimonialsComponent />}/>
                         <Route path="/projects" element={<ProjectsComponent />}/>
                         <Route path="/contacts" element={<ContactsContainer />}/>
+                        <Route path="/codelab" element={<TerminalContainer />}/>
                     </Route>
                 </Routes>
             </BrowserRouter>

@@ -11,6 +11,7 @@ function HeaderComponent() {
                 <li><Link to="/testimonials" className="header_link">Testimonials</Link></li>
                 <li><Link to="/projects" className="header_link">Projects</Link></li>
                 <li><Link to="/contacts" className="header_link">Contacts</Link></li>
+                <li><Link to="/codelab" className="header_link">CodeLab</Link></li>
             </ul>
         </div>
     );

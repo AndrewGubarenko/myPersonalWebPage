@@ -1,0 +1,78 @@
+import React from 'react';
+import { motion, MotionConfig  } from "framer-motion";
+
+const TerminalComponent = ({ messages, inputRef, input, cursorRef, handleSend, setInput, updateCursor }) => {
+
+    return (
+        <MotionConfig transition={{ duration: 0.6 }}>
+            <div className="background_block up_container">
+                <div className="block_container">
+                    <div className="two_thirds_column_container">
+                        <motion.div className="two_third_width_container" style={{padding: "30px 20px 30px 20px"}}
+                                    initial={{
+                                        opacity: 0,
+                                        y: -200,
+                                    }}
+                                    animate={{
+                                        y: 0,
+                                        opacity: 1
+                                    }}
+                                    exit={{
+                                        y: -200,
+                                        opacity: 0,
+                                    }}
+                                    onAnimationComplete={() => {updateCursor()}}>
+                            <div className="terminal" onClick={() => inputRef.current.focus()}>
+                                <div className="output">
+                                    {messages.map((msg, index) => (
+                                        <div key={index}>{msg}</div>
+                                    ))}
+                                </div>
+                                <div className="input-line">
+                                    <span className="prompt">> </span>
+                                    <input className="terminal-input"
+                                        ref={inputRef}
+                                        type="text"
+                                        value={input}
+                                        onChange={(e) => {setInput(e.target.value); updateCursor()}}
+                                        onKeyPress={(e) => {
+                                            if (e.key === 'Enter') {
+                                                handleSend();
+                                            }
+                                        }}
+                                    />
+                                    <span className="cursor" ref={cursorRef}>█</span>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    <div className="narrow_column">
+                        <motion.div className="narrow_block expand_block_to_bottom"
+                                    initial={{
+                                        opacity: 0,
+                                        y: 200,
+                                    }}
+                                    animate={{
+                                        y: 0,
+                                        opacity: 1
+                                    }}>
+                            <div className="text_container">
+                                <p className="sub_header">Welcome to Code Lab!</p>
+                                <p className="text">
+                                    Here you will find a selection of the work I've done as a Java developer,
+                                    showcasing my
+                                    skills and experience in building robust, scalable, and efficient applications.
+                                    My
+                                    projects reflect my dedication to quality code and innovative solutions.
+                                </p>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </div>
+        </MotionConfig>
+    );
+};
+
+export default TerminalComponent;

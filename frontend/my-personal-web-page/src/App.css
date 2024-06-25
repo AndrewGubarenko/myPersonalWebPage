@@ -5,6 +5,7 @@
 @import "styles/experience_timeline_styles.css";
 @import "styles/project_styles.css";
 @import "styles/contact_form_styles.css";
+@import "styles/TerminalStyles.css";
 
 .app {
     display: flex;

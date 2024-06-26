@@ -13,28 +13,34 @@ function SingleExperienceComponent({ experience, singleExperience, onClickPositi
     };
 
     return (
-        <MotionConfig transition={{ duration: 0.6 }}>
+        <MotionConfig transition={{ duration: 0.3 }}>
             <div className="background_block">
                 <div className="block_container">
                     <div className="two_thirds_column_container">
                         <div className="two_thirds_row_container">
                             <div className="block_container">
                                 <div className="wide_column margin_column_right">
-                                    <div className="wide_block">
+                                    <motion.div className="wide_block"
+                                                initial={{opacity: 0}}
+                                                animate={{ opacity: 1 }}
+                                                exit={{opacity: 0 }}>
                                         <div className="text_container">
                                             <p className="main_header reduce_line_height">Experience</p>
                                             <p className="text increase_margin">
                                                 A story of growth, learning and professional development
                                             </p>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 </div>
 
                                 <div className="narrow_column">
-                                    <div className="narrow_block yellow_block yellow_block_experience expand_block_to_bottom">
+                                    <motion.div className="narrow_block yellow_block yellow_block_experience expand_block_to_bottom"
+                                                initial={{ opacity: 0, x: 200, y: 200 }}
+                                                animate={{ x: 0, y: 0, opacity: 1 }}
+                                                exit={{ opacity: 0, x: 200, y: 200 }}>
                                         <p className="company-yellow-block">{singleExperience.company}</p>
                                         <p className="position-yellow-block">{singleExperience.position}</p>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </div>
@@ -46,8 +52,11 @@ function SingleExperienceComponent({ experience, singleExperience, onClickPositi
                                         opacity: 1,
                                         scaleX: 1,
                                         transformOrigin: "left"
-                                    }}>>
-                            <div className="two_third_width_container margin_column_right last_block_container" style={{marginTop: "0"}}>
+                                    }}
+                                    exit={{
+                                        opacity: 0,
+                                        scaleX: 1.4}}>
+                            <div className="two_third_width_container margin_column_right last_block_container">
                                 <div className="timeline">
                                     {experience.map((item, index) => {
                                         const startDate = new Date(item.period.startDate);
@@ -64,8 +73,6 @@ function SingleExperienceComponent({ experience, singleExperience, onClickPositi
                                         let x = -120;
 
                                         if (isSelected) {
-                                            console.log(index)
-                                            console.log(prevIndex)
                                             if (index === 0 && prevIndex === 0) {
                                                 x = -40;
                                             } else if (index < prevIndex) {
@@ -87,7 +94,9 @@ function SingleExperienceComponent({ experience, singleExperience, onClickPositi
                                                                       initial={{
                                                                           opacity: 0}}
                                                                       animate={{
-                                                                          opacity: 1}}>
+                                                                          opacity: 1}}
+                                                                      exit={{
+                                                                          opacity: 0}}>
                                                                 {periodText}
                                                             </motion.p>
                                                         </div>
@@ -97,7 +106,10 @@ function SingleExperienceComponent({ experience, singleExperience, onClickPositi
                                                                         x: x,}}
                                                                     animate={{
                                                                         scale: 1,
-                                                                        x: 0}}>
+                                                                        x: 0}}
+                                                                    exit={{
+                                                                        scale: 1,
+                                                                        x: x,}}>
 
                                                         </motion.div>
                                                     </div>
@@ -128,7 +140,10 @@ function SingleExperienceComponent({ experience, singleExperience, onClickPositi
                              animate={{
                                  y: 0,
                                  opacity: 1
-                             }}>
+                             }}
+                            exit={{
+                                opacity: 0,
+                                y: -200,}}>
                             <div className="icon_frame">
                                 <Link to="/experience">
                                     <img src={TaskPerformed} alt="BackEnd" className="block_icon" />

@@ -1,10 +1,10 @@
 import React from 'react';
-import { motion, MotionConfig  } from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 
 const TerminalComponent = ({ messages, inputRef, input, cursorRef, handleSend, setInput, updateCursor }) => {
 
     return (
-        <MotionConfig transition={{ duration: 0.6 }}>
+        <MotionConfig transition={{ duration: 0.3 }}>
             <div className="background_block up_container">
                 <div className="block_container">
                     <div className="two_thirds_column_container">
@@ -30,12 +30,12 @@ const TerminalComponent = ({ messages, inputRef, input, cursorRef, handleSend, s
                                 </div>
                                 <div className="input-line">
                                     <span className="prompt">> </span>
-                                    <input className="terminal-input"
+                                    <input className="terminal-input" maxLength="20"
                                         ref={inputRef}
                                         type="text"
                                         value={input}
                                         onChange={(e) => {setInput(e.target.value); updateCursor()}}
-                                        onKeyPress={(e) => {
+                                           onKeyUp={(e) => {
                                             if (e.key === 'Enter') {
                                                 handleSend();
                                             }
@@ -56,6 +56,10 @@ const TerminalComponent = ({ messages, inputRef, input, cursorRef, handleSend, s
                                     animate={{
                                         y: 0,
                                         opacity: 1
+                                    }}
+                                    exit={{
+                                        y: 200,
+                                        opacity: 0,
                                     }}>
                             <div className="text_container">
                                 <p className="sub_header">Welcome to Code Lab!</p>

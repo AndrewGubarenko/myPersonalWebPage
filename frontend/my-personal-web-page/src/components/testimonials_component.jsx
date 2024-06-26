@@ -3,7 +3,7 @@ import { motion, MotionConfig  } from "framer-motion";
 
 function TestimonialsComponent() {
     return (
-        <MotionConfig transition={{ duration: 0.5 }}>
+        <MotionConfig transition={{ duration: 0.3 }}>
             <div className="background_block">
                 <div className="block_container last_block_container">
 
@@ -14,7 +14,10 @@ function TestimonialsComponent() {
                                 animate={{
                                     y: 0,
                                     opacity: 1
-                                }}>
+                                }}
+                                exit={{
+                                    opacity: 0,
+                                    y: -200,}}>
                         <div className="text_container">
                             <p className="sub_header">Testimonials From Different Voices</p>
 
@@ -41,6 +44,10 @@ function TestimonialsComponent() {
                                 animate={{
                                     y: 0,
                                     opacity: 1
+                                }}
+                                exit={{
+                                    opacity: 0,
+                                    y: 200
                                 }}>
                         <div className="narrow_block expand_block_to_bottom">
 
@@ -70,6 +77,10 @@ function TestimonialsComponent() {
                                 animate={{
                                     y: 0,
                                     opacity: 1
+                                }}
+                                exit={{
+                                    opacity: 0,
+                                    y: -200,
                                 }}>
                         <div className="narrow_block expand_block_to_bottom">
 

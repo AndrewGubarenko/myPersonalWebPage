@@ -11,7 +11,7 @@ function ContactsComponent({ name, email, message, onChangeName, onChangeEmail, 
                                alert_outline_border_message, alert_outline_boxShadow_message}) {
 
     return (
-        <MotionConfig transition={{ duration: 0.5 }}>
+        <MotionConfig transition={{ duration: 0.3 }}>
             <div className="background_block up_container">
                 <div className="block_container">
 
@@ -24,7 +24,11 @@ function ContactsComponent({ name, email, message, onChangeName, onChangeEmail, 
                                     x: 0,
                                     y: 0,
                                     opacity: 1
-                                }}>
+                                }}
+                                exit={{
+                                    opacity: 0,
+                                    x: -200,
+                                    y: 200,}}>
                         <div className="inner_contact_form_container expand_block_to_bottom">
                             <div className="icon_frame">
                                 <img src={Arrow} alt="BackEnd" className="block_icon"/>
@@ -60,7 +64,11 @@ function ContactsComponent({ name, email, message, onChangeName, onChangeEmail, 
                                     x: 0,
                                     y: 0,
                                     opacity: 1
-                                }}>
+                                }}
+                                exit={{
+                                    opacity: 0,
+                                    x: 200,
+                                    y: -200,}}>
                         <div className="inner_contact_form_container contact_form_container contact_form_container_last">
                             <label className="contact_form_label ">Name</label>
                             <input className="contact_form_input" type="text" placeholder="Enter Your Name" value={name} onChange={onChangeName} style={{border: alert_outline_border_name, boxShadow: alert_outline_boxShadow_name}}/>

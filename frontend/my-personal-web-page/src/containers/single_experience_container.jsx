@@ -1,6 +1,6 @@
 import React from 'react';
 import SingleExperienceComponent from "../components/single_experience_component";
-import withNavigation from '../hoc/withNavigation';
+import withNavigation from '../hoc/WithNavigation';
 
 class SingleExperienceContainer extends React.Component {
 
@@ -13,13 +13,13 @@ class SingleExperienceContainer extends React.Component {
     }
 
     componentDidMount() {
-        const { state } = this.props.location;
-        console.log(state);
+        const { location } = this.props;
+        const { state } = location;
         if (state && state.experience) {
-            this.setState(prevState => ({
+            this.setState({
                 experience: state.experience,
-                singleExperience: state.singleExperience || prevState.singleExperience
-            }));
+                singleExperience: state.singleExperience || {}
+            });
         }
     }
 

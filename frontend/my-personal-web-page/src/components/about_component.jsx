@@ -14,7 +14,7 @@ import { motion, MotionConfig  } from "framer-motion";
 
 function AboutComponent() {
     return (
-        <MotionConfig transition={{ duration: 0.5 }}>
+        <MotionConfig transition={{ duration: 0.3 }}>
             <div className="background_block">
                 <div className="block_container last_block_container">
 
@@ -28,7 +28,11 @@ function AboutComponent() {
                                         x: 0,
                                         y: 0,
                                         opacity: 1
-                                    }}>
+                                    }}
+                                    exit={{
+                                        opacity: 0,
+                                        x: -200,
+                                        y: 200,}}>
                             <div className="icon_frame">
                                 <img src={BackEnd} alt="BackEnd" className="block_icon"/>
                             </div>
@@ -68,7 +72,11 @@ function AboutComponent() {
                                         x: 0,
                                         y: 0,
                                         opacity: 1
-                                    }}>
+                                    }}
+                                    exit={{
+                                        opacity: 0,
+                                        x: 200,
+                                        y: -200,}}>
                             <div className="icon_frame">
                                 <img src={FrontEnd} alt="BackEnd" className="block_icon"/>
                             </div>
@@ -100,7 +108,11 @@ function AboutComponent() {
                                         x: 0,
                                         y: 0,
                                         opacity: 1
-                                    }}>
+                                    }}
+                                    exit={{
+                                        opacity: 0,
+                                        x: 0,
+                                        y: 200,}}>
                             <div className="icon_frame">
                                 <img src={ProjectManagement} alt="ProjectManagement" className="block_icon"/>
                             </div>
@@ -135,7 +147,11 @@ function AboutComponent() {
                                         x: 0,
                                         y: 0,
                                         opacity: 1
-                                    }}>
+                                    }}
+                                    exit={{
+                                        opacity: 0,
+                                        x: -200,
+                                        y: -200,}}>
                             <div className="text_container">
                                 <p className="main_header">About Me</p>
                                 <p className="text">

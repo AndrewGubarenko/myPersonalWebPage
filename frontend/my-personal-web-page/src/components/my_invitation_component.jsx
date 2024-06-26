@@ -6,7 +6,7 @@ import { motion, MotionConfig  } from "framer-motion";
 function MyInvitationComponent() {
 
     return (
-        <MotionConfig transition={{ duration: 0.5 }}>
+        <MotionConfig transition={{ duration: 0.3 }}>
             <motion.div className="intro_container"
                         initial={{
                             opacity: 0,
@@ -16,7 +16,11 @@ function MyInvitationComponent() {
                             x: 0,
                             y: 0,
                             opacity: 1
-                        }}>
+                        }}
+                        exit={{
+                            opacity: 0,
+                            x: -200,
+                            y: -200,}}>
                 <p id="intro_text">
                     Hello, I'm Andrii Hubarenko
                 </p>

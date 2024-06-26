@@ -23,8 +23,6 @@ class ContactsContainer extends React.Component {
         };
     }
 
-
-
     onChangeName = (event) => {
         this.setState({
             alert_outline_border_name: none,

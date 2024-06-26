@@ -24,21 +24,15 @@ function ExperienceComponent({ experience, onClickPosition, onClickDownloadCV })
     }
 
     return(
-        <MotionConfig transition={{ duration: 0.5 }}>
+        <MotionConfig transition={{ duration: 0.3 }}>
             <div className="background_block">
                 <div className="row_container">
                     <div className="block_container">
                         <div className="wide_column margin_column_right">
                             <motion.div className="wide_block"
-                                 initial={{
-                                     opacity: 0,
-                                     x: 200,
-                                     y: 200,}}
-                                 animate={{
-                                     x: 0,
-                                     y: 0,
-                                     opacity: 1
-                                 }}>
+                                 initial={{ opacity: 0 }}
+                                 animate={{ opacity: 1 }}
+                                 exit={{ opacity: 0 }}>
                                 <div className="text_container">
                                     <p className="main_header reduce_line_height">Experience</p>
                                     <p className="text increase_margin">
@@ -50,15 +44,9 @@ function ExperienceComponent({ experience, onClickPosition, onClickDownloadCV })
 
 
                             <motion.div className="narrow_column" style={{cursor: "pointer"}} onClick={onClickDownloadCV}
-                                        initial={{
-                                            opacity: 0,
-                                            x: -200,
-                                            y: 200,}}
-                                        animate={{
-                                            x: 0,
-                                            y: 0,
-                                            opacity: 1
-                                        }}>
+                                        initial={{ opacity: 0, x: 200, y: 200 }}
+                                        animate={{ x: 0, y: 0, opacity: 1 }}
+                                        exit={{ opacity: 0, x: 200, y: 200 }}>
                                 <div className="narrow_block yellow_block expand_block_to_bottom">
                                     <p id="download_cv">
                                         Download My CV
@@ -78,6 +66,12 @@ function ExperienceComponent({ experience, onClickPosition, onClickDownloadCV })
                                         x: 0,
                                         y: 0,
                                         opacity: 1,
+                                    }}
+                                    exit={{
+                                        opacity: 0,
+                                        x: -200,
+                                        y: 200,
+                                        scaleY:1.05
                                     }}>
                             <img src={Rectangle} alt="Rectangle" className="image_block expand_block_to_bottom"/>
                         </motion.div>
@@ -94,7 +88,11 @@ function ExperienceComponent({ experience, onClickPosition, onClickDownloadCV })
                                     opacity: 1,
                                     scaleX: 1,
                                     scaleY: 1
-                                }}>
+                                }}
+                                exit={{
+                                    opacity: 0,
+                                    scaleX: 0,
+                                    scaleY: 0}}>
 
                         <motion.div className="timeline"
                              initial="hidden"
@@ -106,8 +104,7 @@ function ExperienceComponent({ experience, onClickPosition, onClickDownloadCV })
                                 const isLast = index === experience.length - 1;
 
                                 return (
-                                    <motion.div key={index} className="timeline-link" onClick={() => onClickPosition(item)}
-                                                >
+                                    <motion.div key={index} className="timeline-link" onClick={() => onClickPosition(item)}>
                                         <motion.div className="timeline-item"
                                                     variants={elem}>
                                             <div className={`timeline-content ${isLast ? 'timeline-content-last' : ''}`}>

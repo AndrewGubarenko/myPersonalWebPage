@@ -1,6 +1,6 @@
 import React from 'react';
 import ExperienceComponent from '../components/experience_component';
-import withNavigation from '../hoc/withNavigation';
+import withNavigation from '../hoc/WithNavigation';
 import Service from "../services/service";
 
 const experience = [
@@ -110,7 +110,8 @@ class ExperienceContainer extends React.Component {
     }
 
     onClickPosition = (item) => {
-        this.props.navigate('/position', {
+        const { navigate } = this.props;
+        navigate('/position', {
             state: {
                 experience: this.state.experience,
                 singleExperience: item

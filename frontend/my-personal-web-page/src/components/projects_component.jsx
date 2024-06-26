@@ -25,7 +25,11 @@ function ProjectsComponent() {
                                                 x: 0,
                                                 y: 0,
                                                 opacity: 1
-                                            }}>
+                                            }}
+                                            exit={{
+                                                opacity: 0,
+                                                x: -200,
+                                                y: 200,}}>
                                     <div className="cover_image_container">
                                         <img className="cover_image" src={WithCareInHeart} alt="With Care in Heart"/>
                                     </div>
@@ -47,7 +51,10 @@ function ProjectsComponent() {
                             </div>
 
                             <div className="wide_column">
-                                <div className="wide_block expand_block_to_bottom">
+                                <motion.div className="wide_block expand_block_to_bottom"
+                                            initial={{opacity: 0}}
+                                            animate={{opacity: 1}}
+                                            exit={{opacity: 0}}>
                                     <div className="cover_image_container">
                                         <img className="cover_image" src={ATCOTradeUnion} alt="With Care in Heart"/>
                                     </div>
@@ -63,7 +70,7 @@ function ProjectsComponent() {
                                             The primary objective was to offer accessible union announcements while providing exclusive access to essential documents. I seamlessly integrated Java, Spring, Spring MVC, Spring JPA/Hibernate, and Spring Security on the server side. On the user side, I employed ReactJS, Redux, JavaScript, HTML, and CSS to ensure an intuitive and engaging experience.
                                         </p>
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                         <div className="block_container">
@@ -78,7 +85,11 @@ function ProjectsComponent() {
                                                 x: 0,
                                                 y: 0,
                                                 opacity: 1
-                                            }}>
+                                            }}
+                                            exit={{
+                                                opacity: 0,
+                                                x: 200,
+                                                y: 200,}}>
                                     <div className="cover_image_container">
                                         <img className="cover_image" src={ITVDN} alt="With Care in Heart"/>
                                     </div>
@@ -108,7 +119,11 @@ function ProjectsComponent() {
                                                 x: 0,
                                                 y: 0,
                                                 opacity: 1
-                                            }}>
+                                            }}
+                                            exit={{
+                                                opacity: 0,
+                                                x: -200,
+                                                y: 200,}}>
                                     <div className="cover_image_container">
                                         <img className="cover_image" src={CodeLab} alt="With Care in Heart"/>
                                     </div>
@@ -139,7 +154,10 @@ function ProjectsComponent() {
                                     animate={{
                                         x: 0,
                                         opacity: 1
-                                    }}>
+                                    }}
+                                    exit={{
+                                        opacity: 0,
+                                        x: 200}}>
 
                             <div className="text_container">
 

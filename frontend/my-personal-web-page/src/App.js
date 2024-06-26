@@ -12,26 +12,26 @@ import ContactsContainer from "./containers/contacts_container";
 import TerminalContainer from "./containers/terminal_container";
 import ExperienceContainer from "./containers/experience_container";
 import SingleExperienceContainer from "./containers/single_experience_container";
+import AnimatedRoutes from './hoc/AnimatedRoutes';
 
 function App() {
     return (
         <div className='app'>
             <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Layout />}>
-                        <Route index element={<HomePageContainer />}/>
-                        <Route path="/about" element={<AboutComponent />}/>
-                        <Route path="/experience" element={<ExperienceContainer />}/>
-                        <Route path="/position" element={<SingleExperienceContainer />}/>
-                        <Route path="/testimonials" element={<TestimonialsComponent />}/>
-                        <Route path="/projects" element={<ProjectsComponent />}/>
-                        <Route path="/contacts" element={<ContactsContainer />}/>
-                        <Route path="/codelab" element={<TerminalContainer />}/>
+                <AnimatedRoutes>
+                    <Route path="/" element={<Layout/>}>
+                        <Route index element={<HomePageContainer/>}/>
+                        <Route path="/about" element={<AboutComponent/>}/>
+                        <Route path="/experience" element={<ExperienceContainer/>}/>
+                        <Route path="/position" element={<SingleExperienceContainer/>}/>
+                        <Route path="/testimonials" element={<TestimonialsComponent/>}/>
+                        <Route path="/projects" element={<ProjectsComponent/>}/>
+                        <Route path="/contacts" element={<ContactsContainer/>}/>
+                        <Route path="/codelab" element={<TerminalContainer/>}/>
                     </Route>
-                </Routes>
+                </AnimatedRoutes>
             </BrowserRouter>
         </div>
-
     );
 }
 

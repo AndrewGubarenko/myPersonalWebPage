@@ -8,7 +8,7 @@ import { motion, MotionConfig  } from "framer-motion";
 
 function MyTopSkillsComponent() {
     return (
-        <MotionConfig transition={{ duration: 0.5 }}>
+        <MotionConfig transition={{ duration: 0.3 }}>
             <motion.div className="intro_container"
                         initial={{
                             opacity: 0,
@@ -18,7 +18,11 @@ function MyTopSkillsComponent() {
                             x: 0,
                             y: 0,
                             opacity: 1
-                        }}>
+                        }}
+                        exit={{
+                            opacity: 0,
+                            x: -200,
+                            y: 200,}}>
                 <div className="top_skills_container">
                     <img src={Java124} alt="Java" className="top_skills_icon"/>
                     <img src={Python124} alt="Python" className="top_skills_icon"/>

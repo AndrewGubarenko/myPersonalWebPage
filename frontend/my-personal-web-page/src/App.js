@@ -1,7 +1,7 @@
 import './App.css';
 
 import React from 'react';
-import {Route, Routes, BrowserRouter} from 'react-router-dom';
+import {Route, BrowserRouter} from 'react-router-dom';
 
 import { Layout } from "./containers/Layout";
 import HomePageContainer from "./containers/home_page_container";
@@ -13,11 +13,15 @@ import TerminalContainer from "./containers/terminal_container";
 import ExperienceContainer from "./containers/experience_container";
 import SingleExperienceContainer from "./containers/single_experience_container";
 import AnimatedRoutes from './hoc/AnimatedRoutes';
+import RedirectHandler from './handlers/RedirectHandler'
+
+import MobileHomePageContainer from "./containers/mobile/mobile_home_page_container";
 
 function App() {
     return (
         <div className='app'>
             <BrowserRouter>
+                <RedirectHandler />
                 <AnimatedRoutes>
                     <Route path="/" element={<Layout/>}>
                         <Route index element={<HomePageContainer/>}/>
@@ -29,6 +33,11 @@ function App() {
                         <Route path="/contacts" element={<ContactsContainer/>}/>
                         <Route path="/codelab" element={<TerminalContainer/>}/>
                     </Route>
+
+                    {/*Mobile pages*/}
+
+                    <Route path="/m" index element={<MobileHomePageContainer/>}/>
+
                 </AnimatedRoutes>
             </BrowserRouter>
         </div>

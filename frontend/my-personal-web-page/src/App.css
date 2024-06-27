@@ -6,6 +6,7 @@
 @import "styles/project_styles.css";
 @import "styles/contact_form_styles.css";
 @import "styles/TerminalStyles.css";
+@import "styles/mobile/mobile_block_styles.css";
 
 .app {
     display: flex;

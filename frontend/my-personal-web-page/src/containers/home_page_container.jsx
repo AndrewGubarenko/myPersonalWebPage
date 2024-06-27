@@ -13,8 +13,6 @@ class HomePageContainer extends Component {
         if (footerElement) {
             footerElement.style.position = 'fixed';
             footerLinksIcons.style.display = 'none';
-        } else {
-            console.error('Footer element not found');
         }
     }
 
@@ -24,8 +22,6 @@ class HomePageContainer extends Component {
         if (footerElement) {
             footerElement.style.position = 'absolute';
             footerLinksIcons.style.display = 'block';
-        } else {
-            console.error('Footer element not found');
         }
     }
 

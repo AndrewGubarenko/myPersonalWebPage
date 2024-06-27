@@ -17,6 +17,7 @@
     font-family: Oxygen, monospace;
     font-size: 1em;
     line-height: 120%;
+    box-sizing: border-box;
 }
 
 .contact_form_input:focus {

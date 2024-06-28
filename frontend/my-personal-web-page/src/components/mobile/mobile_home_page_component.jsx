@@ -8,7 +8,6 @@ import JS124 from "../../statics/icons/124/Group 64.svg";
 import Apache124 from "../../statics/icons/124/Group 65.svg";
 import Docker124 from "../../statics/icons/124/Group 66.svg";
 import Bitbucket124 from "../../statics/icons/124/Group 67.svg";
-import Burger from "../../statics/mobile/menu/Burger menu.svg";
 
 function MobileHomePageComponent() {
 
@@ -16,9 +15,6 @@ function MobileHomePageComponent() {
         <MotionConfig transition={{duration: 0.3}}>
 
             <div className="mobile_main_container">
-                <div className="mobile_icon_frame">
-                    <img src={Burger} alt="BackEnd" className="mobile_block_icon"/>
-                </div>
 
                 <motion.div className="mobile_info_container"
                             initial={{opacity: 0, x: 50}}

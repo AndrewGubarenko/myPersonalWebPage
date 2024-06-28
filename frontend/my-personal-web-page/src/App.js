@@ -16,6 +16,7 @@ import AnimatedRoutes from './hoc/AnimatedRoutes';
 import RedirectHandler from './handlers/RedirectHandler'
 
 import MobileHomePageContainer from "./containers/mobile/mobile_home_page_container";
+import {MobileLayout} from "./containers/mobile/MobileLayout";
 
 function App() {
     return (
@@ -35,8 +36,9 @@ function App() {
                     </Route>
 
                     {/*Mobile pages*/}
-
-                    <Route path="/m" index element={<MobileHomePageContainer/>}/>
+                    <Route path="/" element={<MobileLayout/>}>
+                        <Route path="/m" index element={<MobileHomePageContainer/>}/>
+                    </Route>
 
                 </AnimatedRoutes>
             </BrowserRouter>

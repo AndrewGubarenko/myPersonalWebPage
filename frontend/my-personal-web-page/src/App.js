@@ -17,6 +17,7 @@ import RedirectHandler from './handlers/RedirectHandler'
 
 import MobileHomePageContainer from "./containers/mobile/mobile_home_page_container";
 import {MobileLayout} from "./containers/mobile/MobileLayout";
+import MobileAboutComponent from "./components/mobile/mobile_about_component";
 
 function App() {
     return (
@@ -38,6 +39,7 @@ function App() {
                     {/*Mobile pages*/}
                     <Route path="/" element={<MobileLayout/>}>
                         <Route path="/m" index element={<MobileHomePageContainer/>}/>
+                        <Route path="/m/about" index element={<MobileAboutComponent/>}/>
                     </Route>
 
                 </AnimatedRoutes>

@@ -26,6 +26,13 @@
     padding: 1.5em;
 }
 
+.mobile_image_block {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    width: calc(100% + 3em);
+    box-sizing: border-box;
+}
+
 .mobile-video-background {
     position: relative;
     width: auto;
@@ -65,9 +72,7 @@
     margin: 5%;
 }
 
-
-
-#mobile_intro_text {
+#mobile_intro_text, .mobile_main_header {
     color: rgba(254, 234, 83, 1);
     font-family: Oxygen, monospace;
     font-size: 2em;

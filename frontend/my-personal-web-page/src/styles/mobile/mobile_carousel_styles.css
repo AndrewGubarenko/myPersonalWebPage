@@ -1,0 +1,33 @@
+.custom-prev {
+    position: absolute;
+    bottom: 1.5%;
+    left: 10%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.custom-next {
+    position: absolute;
+    bottom: 1.5%;
+    right: 10%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.custom-prev img,
+.custom-next img {
+    width: 24px; /* Приклад розміру */
+    height: 24px; /* Приклад розміру */
+}
+
+.carousel_span {
+    position: absolute;
+    bottom: 3.5%;
+    color: rgba(254, 234, 83, 1);
+    margin-top: 2em;
+    align-self: center;
+}
+
+.slick-slide>div {padding: 0 10%;}

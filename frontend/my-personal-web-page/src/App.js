@@ -19,6 +19,7 @@ import MobileHomePageContainer from "./containers/mobile/mobile_home_page_contai
 import {MobileLayout} from "./containers/mobile/MobileLayout";
 import MobileAboutComponent from "./components/mobile/mobile_about_component";
 import MobileTestimonialsComponent from "./components/mobile/mobile_testimonials_component";
+import MobileContactsContainer from "./containers/mobile/mobile_contacts_container";
 
 function App() {
     return (
@@ -42,6 +43,7 @@ function App() {
                         <Route path="/m" index element={<MobileHomePageContainer/>}/>
                         <Route path="/m/about" index element={<MobileAboutComponent/>}/>
                         <Route path="/m/testimonials" index element={<MobileTestimonialsComponent/>}/>
+                        <Route path="/m/contacts" index element={<MobileContactsContainer/>}/>
                     </Route>
 
                 </AnimatedRoutes>

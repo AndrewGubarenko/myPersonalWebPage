@@ -1,12 +1,12 @@
 import React from "react";
-import ContactsComponent from "../components/contacts_component";
-import Service from "../services/service";
+import Service from "../../services/service";
+import MobileContactsComponent from "../../components/mobile/mobile_contacts_component";
 
 const border_alert = "1px solid #FF2800";
 const box_shadow_alert = "0 0 10px #FF2800";
 const none = "none";
 
-class ContactsContainer extends React.Component {
+class MobileContactsContainer extends React.Component {
 
     constructor(props) {
         super(props);
@@ -92,7 +92,7 @@ class ContactsContainer extends React.Component {
 
     render() {
         return(
-            <ContactsComponent
+            <MobileContactsComponent
                 name={this.state.name}
                 email={this.state.email}
                 message={this.state.message}
@@ -111,4 +111,4 @@ class ContactsContainer extends React.Component {
     }
 }
 
-export default ContactsContainer
+export default MobileContactsContainer;

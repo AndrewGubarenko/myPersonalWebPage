@@ -20,13 +20,13 @@ import ArrowRight from '../../statics/mobile/carousel/mdi_arrow-right-bold.svg';
 import {motion} from "framer-motion";
 
 function MobileAboutComponent() {
-    const CustomPrevArrow = (props) => (
+    const CustomPrevArrow = () => (
         <div className="custom-prev">
             <img src={ArrowLeft} alt="Prev"/>
         </div>
     );
 
-    const CustomNextArrow = (props) => (
+    const CustomNextArrow = () => (
         <div className="custom-next">
             <img src={ArrowRight} alt="Next"/>
         </div>
@@ -73,7 +73,7 @@ function MobileAboutComponent() {
     };
 
     return (
-        <div className="mobile_main_container mobile_main_container_bg"
+        <div className="mobile_main_container mobile_main_container_bg mobile_main_container_reduce_padding_top"
                     style={{paddingRight: "0", paddingLeft: "0"}}>
             <Slider {...settings}>
 

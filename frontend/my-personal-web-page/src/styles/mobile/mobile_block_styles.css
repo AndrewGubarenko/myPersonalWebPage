@@ -1,13 +1,16 @@
 .mobile_main_container {
     position: relative;
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
     padding: 50% 10% 10% 10%;
     width: 100%;
     height: auto;
     min-height: 100vh;
     box-sizing: border-box;
+}
+
+.mobile_main_container_reduce_padding_top {
+    padding-top: 40%;
 }
 
 .mobile_main_container_bg {
@@ -81,4 +84,12 @@
     text-align: left;
     margin: 40px 0 0 0;
     cursor: default;
+}
+
+.mobile_testimonials_name_header {
+    color:rgba(254, 234, 83, 1);
+    font-family: Oxygen, monospace;
+    font-size: 1em;
+    line-height: 120%;
+    margin-top: 2em;
 }

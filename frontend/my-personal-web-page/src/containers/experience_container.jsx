@@ -2,6 +2,8 @@ import React from 'react';
 import ExperienceComponent from '../components/experience_component';
 import withNavigation from '../hoc/WithNavigation';
 import Service from "../services/service";
+import {isMobile} from "../handlers/RedirectHandler";
+import MobileExperienceComponent from "../components/mobile/mobile_experience_component";
 
 const experience = [
     {
@@ -111,7 +113,8 @@ class ExperienceContainer extends React.Component {
 
     onClickPosition = (item) => {
         const { navigate } = this.props;
-        navigate('/position', {
+        const redirectPath = isMobile ? '/m/position' : '/position';
+        navigate(redirectPath, {
             state: {
                 experience: this.state.experience,
                 singleExperience: item
@@ -131,11 +134,21 @@ class ExperienceContainer extends React.Component {
 
     render() {
         return (
-            <ExperienceComponent
-                experience={this.state.experience}
-                onClickPosition={this.onClickPosition}
-                onClickDownloadCV={this.onClickDownloadCV}
-            />
+            <div>
+                {isMobile ?
+                    <MobileExperienceComponent
+                        experience={this.state.experience}
+                        onClickPosition={this.onClickPosition}
+                        onClickDownloadCV={this.onClickDownloadCV}
+                    />
+                :
+                    <ExperienceComponent
+                        experience={this.state.experience}
+                        onClickPosition={this.onClickPosition}
+                        onClickDownloadCV={this.onClickDownloadCV}
+                    />
+                }
+            </div>
         );
     }
 }

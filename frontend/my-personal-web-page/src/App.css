@@ -9,7 +9,7 @@
 @import "styles/mobile/mobile_block_styles.css";
 @import "styles/mobile/mobile_header_styles.css";
 @import "styles/mobile/mobile_carousel_styles.css";
-
+@import "styles/mobile/mobile_experience_timeline_style.css";
 .app {
     display: flex;
     justify-content: center;

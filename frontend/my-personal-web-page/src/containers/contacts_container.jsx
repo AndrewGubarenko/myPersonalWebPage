@@ -1,7 +1,8 @@
 import React from "react";
 import ContactsComponent from "../components/contacts_component";
 import Service from "../services/service";
-
+import MobileContactsComponent from "../components/mobile/mobile_contacts_component";
+import {isMobile} from "../handlers/RedirectHandler";
 const border_alert = "1px solid #FF2800";
 const box_shadow_alert = "0 0 10px #FF2800";
 const none = "none";
@@ -92,21 +93,40 @@ class ContactsContainer extends React.Component {
 
     render() {
         return(
-            <ContactsComponent
-                name={this.state.name}
-                email={this.state.email}
-                message={this.state.message}
-                onChangeName={this.onChangeName}
-                onChangeEmail={this.onChangeEmail}
-                onChangeMessage={this.onChangeMessage}
-                onClickSubmit={this.onClickSubmit}
-                alert_outline_border_name={this.state.alert_outline_border_name}
-                alert_outline_boxShadow_name={this.state.alert_outline_boxShadow_name}
-                alert_outline_border_email={this.state.alert_outline_border_email}
-                alert_outline_boxShadow_email={this.state.alert_outline_boxShadow_email}
-                alert_outline_border_message={this.state.alert_outline_border_message}
-                alert_outline_boxShadow_message={this.state.alert_outline_boxShadow_message}
-            />
+            <div>
+                {isMobile ?
+                    <MobileContactsComponent
+                        name={this.state.name}
+                        email={this.state.email}
+                        message={this.state.message}
+                        onChangeName={this.onChangeName}
+                        onChangeEmail={this.onChangeEmail}
+                        onChangeMessage={this.onChangeMessage}
+                        onClickSubmit={this.onClickSubmit}
+                        alert_outline_border_name={this.state.alert_outline_border_name}
+                        alert_outline_boxShadow_name={this.state.alert_outline_boxShadow_name}
+                        alert_outline_border_email={this.state.alert_outline_border_email}
+                        alert_outline_boxShadow_email={this.state.alert_outline_boxShadow_email}
+                        alert_outline_border_message={this.state.alert_outline_border_message}
+                        alert_outline_boxShadow_message={this.state.alert_outline_boxShadow_message}
+                    />
+                :
+                    <ContactsComponent
+                        name={this.state.name}
+                        email={this.state.email}
+                        message={this.state.message}
+                        onChangeName={this.onChangeName}
+                        onChangeEmail={this.onChangeEmail}
+                        onChangeMessage={this.onChangeMessage}
+                        onClickSubmit={this.onClickSubmit}
+                        alert_outline_border_name={this.state.alert_outline_border_name}
+                        alert_outline_boxShadow_name={this.state.alert_outline_boxShadow_name}
+                        alert_outline_border_email={this.state.alert_outline_border_email}
+                        alert_outline_boxShadow_email={this.state.alert_outline_boxShadow_email}
+                        alert_outline_border_message={this.state.alert_outline_border_message}
+                        alert_outline_boxShadow_message={this.state.alert_outline_boxShadow_message}
+                    />}
+            </div>
         );
     }
 }

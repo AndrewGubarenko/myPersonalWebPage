@@ -1,0 +1,59 @@
+.mobile_timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0;
+    height: auto;
+}
+
+.mobile_timeline::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 95%;
+    left: 1.5em;
+    top: 1.5em;
+    background: linear-gradient(#FEEA53 0%, #F1B306 100%);
+    border-radius: 3px;
+    transform: translateX(-50%);
+}
+
+.mobile_timeline_dot {
+    position: absolute;
+    top: 1.9em;
+    left: 1.5em;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(to right, #FEEA53, #F1B306);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.mobile_timeline_item {
+    position: relative;
+    width: auto;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    font-family: Oxygen, monospace;
+}
+
+.mobile_company_name {
+    color: #FFF;
+}
+
+.mobile_timeline_content {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 2em;
+    cursor: pointer;
+    text-align: left;
+}
+
+.mobile_timeline_link {
+    height: auto;
+}

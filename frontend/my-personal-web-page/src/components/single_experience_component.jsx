@@ -146,7 +146,7 @@ function SingleExperienceComponent({ experience, singleExperience, onClickPositi
                                 y: -200,}}>
                             <div className="icon_frame">
                                 <Link to="/experience">
-                                    <img src={TaskPerformed} alt="BackEnd" className="block_icon" />
+                                    <img src={TaskPerformed} alt="Close" className="block_icon" />
                                 </Link>
                             </div>
                             <div className="text_container">

@@ -97,7 +97,7 @@ function MobileAboutComponent() {
                         <span className="carousel_span">Swipe</span>
                     </div>
                     <Link to="/contacts" id="contact_me_link">
-                        <div id="contact_me_button" style={{marginTop: "0"}}>
+                        <div id="mobile_contact_me_button" style={{marginTop: "0"}}>
                             CONTACT ME
                         </div>
                     </Link>
@@ -139,7 +139,7 @@ function MobileAboutComponent() {
                         <span className="carousel_span">Swipe</span>
                     </div>
                     <Link to="/contacts" id="contact_me_link">
-                        <div id="contact_me_button" style={{marginTop: "0"}}>
+                        <div id="mobile_contact_me_button" style={{marginTop: "0"}}>
                             CONTACT ME
                         </div>
                     </Link>
@@ -180,7 +180,7 @@ function MobileAboutComponent() {
                         <span className="carousel_span">Swipe</span>
                     </div>
                     <Link to="/contacts" id="contact_me_link">
-                        <div id="contact_me_button" style={{marginTop: "0"}}>
+                        <div id="mobile_contact_me_button" style={{marginTop: "0"}}>
                             CONTACT ME
                         </div>
                     </Link>
@@ -215,7 +215,7 @@ function MobileAboutComponent() {
                         <span className="carousel_span">Swipe</span>
                     </div>
                     <Link to="/contacts" id="contact_me_link">
-                        <div id="contact_me_button" style={{marginTop: "0"}}>
+                        <div id="mobile_contact_me_button" style={{marginTop: "0"}}>
                             CONTACT ME
                         </div>
                     </Link>

@@ -93,3 +93,17 @@
     line-height: 120%;
     margin-top: 2em;
 }
+
+#mobile_contact_me_button {
+    font-weight: bold;
+    font-family: Oxygen, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 46px;
+    margin-top: 20px;
+    border-radius: 0.5em;
+    background: linear-gradient(to right bottom, #FEEA53 0%, #F1B306 100%);
+    transition: 0.5s ease-in-out;
+}

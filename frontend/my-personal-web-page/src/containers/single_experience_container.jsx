@@ -1,6 +1,9 @@
 import React from 'react';
 import SingleExperienceComponent from "../components/single_experience_component";
 import withNavigation from '../hoc/WithNavigation';
+import {isMobile} from "../handlers/RedirectHandler";
+import MobileSingleExperienceComponent from "../components/mobile/mobile_single_experience_component";
+import Service from "../services/service";
 
 class SingleExperienceContainer extends React.Component {
 
@@ -23,17 +26,35 @@ class SingleExperienceContainer extends React.Component {
         }
     }
 
+    onClickDownloadCV = () => {
+        Service.getCV().then(response => {
+            if (response.ok) {
+                alert("here is my CV");
+            } else {
+                alert("CV was not found");
+            }
+        });
+    }
+
     onClickPosition = (item) => {
         this.setState({ singleExperience: item });
     };
 
     render() {
         return(
-            <SingleExperienceComponent
-                experience={this.state.experience}
-                singleExperience={this.state.singleExperience}
-                onClickPosition={this.onClickPosition}
-            />
+            <div>
+                {isMobile ?
+                    <MobileSingleExperienceComponent
+                        singleExperience={this.state.singleExperience}
+                        onClickDownloadCV={this.onClickDownloadCV}
+                    />
+                :
+                <SingleExperienceComponent
+                    experience={this.state.experience}
+                    singleExperience={this.state.singleExperience}
+                    onClickPosition={this.onClickPosition}
+                />}
+            </div>
         )
     }
 

@@ -56,7 +56,7 @@ function ProjectsComponent() {
                                             animate={{opacity: 1}}
                                             exit={{opacity: 0}}>
                                     <div className="cover_image_container">
-                                        <img className="cover_image" src={ATCOTradeUnion} alt="With Care in Heart"/>
+                                        <img className="cover_image" src={ATCOTradeUnion} alt="ATCO Trade Union"/>
                                     </div>
                                     <div className="icon_frame icon_overlays">
                                         <a href="https://github.com/AndrewGubarenko/AirNavHub" target="_blank"
@@ -91,7 +91,7 @@ function ProjectsComponent() {
                                                 x: 200,
                                                 y: 200,}}>
                                     <div className="cover_image_container">
-                                        <img className="cover_image" src={ITVDN} alt="With Care in Heart"/>
+                                        <img className="cover_image" src={ITVDN} alt="ITVDN"/>
                                     </div>
                                     <div className="icon_frame icon_overlays">
                                         <a href="https://itvdn.com/ua/search?query=%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9%20%D0%93%D1%83%D0%B1%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE"
@@ -125,7 +125,7 @@ function ProjectsComponent() {
                                                 x: -200,
                                                 y: 200,}}>
                                     <div className="cover_image_container">
-                                        <img className="cover_image" src={CodeLab} alt="With Care in Heart"/>
+                                        <img className="cover_image" src={CodeLab} alt="Code Lab"/>
                                     </div>
                                     <div className="icon_frame icon_overlays">
                                         <Link to="/codelab">

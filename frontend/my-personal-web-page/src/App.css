@@ -10,6 +10,8 @@
 @import "styles/mobile/mobile_header_styles.css";
 @import "styles/mobile/mobile_carousel_styles.css";
 @import "styles/mobile/mobile_experience_timeline_style.css";
+@import "styles/mobile/mobile_projects_styles.css";
+
 .app {
     display: flex;
     justify-content: center;

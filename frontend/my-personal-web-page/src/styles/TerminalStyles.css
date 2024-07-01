@@ -65,3 +65,53 @@
         background-color: rgba(254, 234, 83, 1);
     }
 }
+
+.mobile_terminal {
+    position: relative;
+    background: rgba(20, 30, 37, 0.6);
+    color: rgba(254, 234, 83, 1);
+    font-family: 'Oxygen Mono', monospace;
+    font-size: 1em;
+    max-height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2em;
+    box-sizing: border-box;
+    padding-top: 4em;
+    padding-right: 40px;
+}
+
+.mobile_output {
+    flex-grow: 0;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    line-height: 150%;
+    padding-left: 2em;
+    width: calc(100% - 15px);
+}
+
+.mobile_output:first-child {
+    padding-top: 50px;
+}
+
+.mobile_terminal::-webkit-scrollbar {
+    width: 12px;
+    margin-left: 20px;
+}
+
+.mobile_terminal::-webkit-scrollbar-track {
+    background: #344C5C;
+    border-radius: 10px;
+}
+
+.mobile_terminal::-webkit-scrollbar-thumb {
+    background-color: rgba(254, 234, 83, 1);
+    border-radius: 10px;
+    border: 3px solid #344C5C;
+}
+
+.mobile_terminal {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(254, 234, 83, 1) rgba(20, 30, 37, 0.6);
+}

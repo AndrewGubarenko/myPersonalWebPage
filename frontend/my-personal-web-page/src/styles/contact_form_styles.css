@@ -39,12 +39,12 @@
 }
 
 .contact_form_input_message::-webkit-scrollbar-track {
-    background-color: #f0f0f0;
-    border-radius: 0.5em;
+    background-color: #344C5C;
+    border-radius: 0.5em 0.4em 0.4em 0.5em;
 }
 
 .contact_form_input_message::-webkit-scrollbar-thumb {
-    background-color: #344C5C;
+    background-color: rgba(254, 234, 83, 1);
     border-radius: 0.5em;
 }
 

@@ -14,7 +14,6 @@ class MobileHeaderContainer extends Component {
     }
 
     onClickBurger = () => {
-        console.log("burger clicked");
         this.setState({
             burgerDisplay: "none",
             burgerZIndex: "0",
@@ -24,7 +23,6 @@ class MobileHeaderContainer extends Component {
     }
 
     onClickClose = () => {
-        console.log("close clicked");
         this.setState({
             burgerDisplay: "block",
             burgerZIndex: "3",

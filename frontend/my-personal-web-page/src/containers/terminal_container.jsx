@@ -2,9 +2,13 @@ import { useState, useEffect, useRef } from 'react';
 import { Client } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
 import TerminalComponent from "../components/terminal_component";
+import {isMobile} from "../handlers/RedirectHandler";
+import MobileTerminalComponent from "../components/mobile/mobile_terminal_component";
 
 function TerminalContainer() {
     const [messages, setMessages] = useState(['Hello', 'another message']);
+    const description = "Here you will find a selection of the work I've done as a Java developer, showcasing my skills and experience in building robust, scalable, and efficient applications. \n\n" +
+        "My projects reflect my dedication to quality code and innovative solutions.";
     const [input, setInput] = useState('');
     const inputRef = useRef(null);
     const cursorRef = useRef(null);
@@ -66,16 +70,34 @@ function TerminalContainer() {
     };
 
     return (
-        <TerminalComponent
-            messages={messages}
-            inputRef={inputRef}
-            input={input}
-            client={client}
-            cursorRef={cursorRef}
-            handleSend={handleSend}
-            setInput={setInput}
-            updateCursor={updateCursor}
-        />
+        <div>
+            {isMobile ?
+                <MobileTerminalComponent
+                    messages={messages}
+                    description={description}
+                    inputRef={inputRef}
+                    input={input}
+                    client={client}
+                    cursorRef={cursorRef}
+                    handleSend={handleSend}
+                    setInput={setInput}
+                    updateCursor={updateCursor}
+                />
+                :
+                <TerminalComponent
+                    messages={messages}
+                    description={description}
+                    inputRef={inputRef}
+                    input={input}
+                    client={client}
+                    cursorRef={cursorRef}
+                    handleSend={handleSend}
+                    setInput={setInput}
+                    updateCursor={updateCursor}
+                />
+            }
+        </div>
+
     );
 }
 

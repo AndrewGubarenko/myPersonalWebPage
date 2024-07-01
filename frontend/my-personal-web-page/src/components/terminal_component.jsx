@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion, MotionConfig } from "framer-motion";
 
-const TerminalComponent = ({ messages, inputRef, input, cursorRef, handleSend, setInput, updateCursor }) => {
-
+const TerminalComponent = ({ messages, description, inputRef, input, cursorRef, handleSend, setInput, updateCursor }) => {
+    const paragraphs = description.split('\n\n');
+    console.log(paragraphs);
     return (
         <MotionConfig transition={{ duration: 0.3 }}>
             <div className="background_block up_container">
@@ -63,13 +64,9 @@ const TerminalComponent = ({ messages, inputRef, input, cursorRef, handleSend, s
                                     }}>
                             <div className="text_container">
                                 <p className="sub_header">Welcome to Code Lab!</p>
-                                <p className="text">
-                                    Here you will find a selection of the work I've done as a Java developer,
-                                    showcasing my
-                                    skills and experience in building robust, scalable, and efficient applications.
-                                    My
-                                    projects reflect my dedication to quality code and innovative solutions.
-                                </p>
+                                {paragraphs.map((para, index) => (
+                                    <p key={index} className="text">{para}</p>
+                                ))}
                             </div>
                         </motion.div>
                     </div>

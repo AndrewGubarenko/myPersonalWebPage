@@ -50,7 +50,8 @@ function App() {
                             <Route path="/m/experience" element={<ExperienceContainer/>}/>
                             <Route path="/m/position" element={<SingleExperienceContainer/>}/>
                             <Route path="/m/projects" element={<MobileProjectsComponent/>}/>
-                            <Route path="/m/project/:id" element={<MobileSingleProjectComponent/>} />
+                            <Route path="/m/project/:id" element={<MobileSingleProjectComponent/>}/>
+                            <Route path="/m/codelab" element={<TerminalContainer/>}/>
                         </Route>
 
                     </AnimatedRoutes>
